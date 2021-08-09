@@ -6,7 +6,7 @@
     <data>
         <variable
             name="myViewModel"
-            type="com.example.twowaydatabindingexample.MainActivity" />
+            type="com.example.twowaydatabindingexample.MainActivityViewModel" />
     </data>
 
     <RelativeLayout
@@ -21,13 +21,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
+            android:text="@={myViewModel.userName}"
             />
 
         <TextView
             android:id="@+id/tvName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:text="@{myViewModel.userName}"
             android:gravity="center"
             android:layout_below="@+id/etName"
             android:layout_marginTop="18dp"/>
